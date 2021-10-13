@@ -6,7 +6,7 @@
 using namespace cv;
 using namespace std;
 
-///////////////// Project 1 – Virtual Painter //////////////////////
+
 
 Mat img;
 VideoCapture cap(0);
@@ -85,7 +85,7 @@ circle(img, Point(newPoints[i][0],newPoints[i][1]), 10, myColorValues[newPoints[
 }
 }
 
-void main() {
+int main() {
 
 while (true) {
 
@@ -93,7 +93,7 @@ cap.read(img);
 newPoints = findColor(img);
 drawOnCanvas(newPoints, myColorValues);
 
-imshow(“Image”, img);
+imshow("Image", img);
 waitKey(1);
 }
 }
